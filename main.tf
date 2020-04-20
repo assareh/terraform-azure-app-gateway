@@ -103,3 +103,11 @@ resource "azurerm_application_gateway" "network" {
     backend_http_settings_name = local.http_setting_name
   }
 }
+
+output "pip" {
+  value = azurerm_public_ip.example.ip_address
+}
+
+output "fqdn" {
+  value = azurerm_public_ip.example.fqdn
+}
