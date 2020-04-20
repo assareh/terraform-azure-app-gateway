@@ -105,9 +105,11 @@ resource "azurerm_application_gateway" "network" {
 }
 
 output "pip" {
-  value = azurerm_public_ip.example.ip_address
+  value       = azurerm_public_ip.example.ip_address
+  description = "The public IP address."
 }
 
 output "fqdn" {
-  value = azurerm_public_ip.example.fqdn
+  value       = azurerm_public_ip.example.fqdn
+  description = "The fully qualified domain name."
 }
